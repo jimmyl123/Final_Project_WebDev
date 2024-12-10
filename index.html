@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Modern and Sleek Web Page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Modern Web Project</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Weather + Event Finder</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#weather" class="nav-link">Weather</a></li>
+                <li><a href="#mood" class="nav-link">Mood Board</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Day</h1>
+            <p>Check the weather, find local events, and set the perfect mood for your journey.</p>
+            <button class="hero-cta" id="get-started-button">Get Started</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Input/Interactive Section -->
+        <section class="input-section" id="weather">
+            <h2>Check the Weather</h2>
+            <p>Enter a location to get the latest weather:</p>
+            <div class="input-group">
+                <input type="text" id="city-input" placeholder="Enter a city..." />
+                <button id="get-weather-button">Get Weather</button>
+            </div>
+        </section>
+
+        <!-- Weather Display Section -->
+        <section class="weather-display hidden" id="weather-display">
+            <h2 id="weather-heading">--</h2>
+            <p id="weather-description">--</p>
+            <div class="weather-info">
+                <p id="weather-temp" class="temperature">--°F</p>
+                <p id="weather-main-desc" class="description">--</p>
+                <img id="weather-icon" class="weather-icon" src="" alt="Weather icon" />
+            </div>
+            <div class="weather-extra">
+                <p><strong>Humidity:</strong> <span id="weather-humidity">--</span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="weather-wind">--</span> mph</p>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events-container hidden" id="events">
+            <h2>Local Events</h2>
+            <p>Find what's happening near you:</p>
+            <div class="events-list" id="events-list"></div>
+        </section>
+
+        <!-- Mood Board Section -->
+        <section class="mood-section" id="mood">
+            <h2>Mood Board</h2>
+            <p>Set the scene for your perfect day.</p>
+            <div class="mood-board" id="mood-board"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact</a>
+        </div>
+        <p class="footer-credits">&copy; 2024 Jimmy Lancaster</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
