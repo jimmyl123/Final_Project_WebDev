@@ -263,9 +263,16 @@ h1, h2, h3, h4, h5, p, ul, li {
 .mood-board {
     margin-top: 20px;
     height: 200px;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     border-radius: 5px;
+}
+
+#mood-message {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #555;
 }
 
 /* Footer */
