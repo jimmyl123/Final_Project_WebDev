@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 
+/* Reset some basic elements */
 h1, h2, h3, h4, h5, p, ul, li {
     margin: 0;
     padding: 0;
@@ -302,6 +303,11 @@ h1, h2, h3, h4, h5, p, ul, li {
 .footer-links a:hover {
     color: #fff;
     transform: scale(1.1);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
 }
 
 /* Responsive Design */
