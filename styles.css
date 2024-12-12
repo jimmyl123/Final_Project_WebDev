@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Reset some basic elements */
 h1, h2, h3, h4, h5, p, ul, li {
     margin: 0;
     padding: 0;
@@ -24,12 +23,23 @@ h1, h2, h3, h4, h5, p, ul, li {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    transition: all 0.3s;
+}
+
+.header:hover {
+    background: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
     font-size: 1.5em;
     font-weight: 600;
     color: #333;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .nav ul {
@@ -44,11 +54,12 @@ h1, h2, h3, h4, h5, p, ul, li {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .nav a:hover {
     color: #007BFF;
+    transform: scale(1.2);
 }
 
 .mobile-nav-toggle {
@@ -69,11 +80,21 @@ h1, h2, h3, h4, h5, p, ul, li {
     text-align: center;
     color: #fff;
     margin-top: 70px; /* Prevent header overlap */
+    transition: transform 0.3s;
+}
+
+.hero:hover {
+    transform: scale(1.02);
 }
 
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.hero-content h1:hover {
+    color: #ffc107;
 }
 
 .hero-content p {
@@ -91,11 +112,12 @@ h1, h2, h3, h4, h5, p, ul, li {
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .hero-cta:hover {
     background: #0056b3;
+    transform: translateY(-5px);
 }
 
 /* Main Container */
@@ -115,6 +137,11 @@ h1, h2, h3, h4, h5, p, ul, li {
 .input-section h2 {
     font-weight: 600;
     margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.input-section h2:hover {
+    color: #007BFF;
 }
 
 .input-group {
@@ -132,6 +159,11 @@ h1, h2, h3, h4, h5, p, ul, li {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.input-group input:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .input-group button {
@@ -142,11 +174,12 @@ h1, h2, h3, h4, h5, p, ul, li {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .input-group button:hover {
     background: #0056b3;
+    transform: translateY(-3px);
 }
 
 /* Weather Display */
@@ -156,15 +189,16 @@ h1, h2, h3, h4, h5, p, ul, li {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.weather-display:hover {
+    transform: scale(1.05);
 }
 
 .weather-display h2 {
     margin-bottom: 10px;
     font-weight: 600;
-}
-
-.weather-display p {
-    margin-bottom: 10px;
 }
 
 .weather-info {
@@ -178,28 +212,22 @@ h1, h2, h3, h4, h5, p, ul, li {
     font-size: 2.5em;
     font-weight: 600;
     margin-bottom: 5px;
+    transition: color 0.3s;
 }
 
-.weather-info .description {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 10px;
+.weather-info .temperature:hover {
+    color: #007BFF;
 }
 
 .weather-info .weather-icon {
     width: 100px;
     height: 100px;
     margin-top: 20px;
+    transition: transform 0.3s;
 }
 
-.weather-extra {
-    margin-top: 20px;
-    font-size: 1em;
-    color: #333;
-}
-
-.weather-extra p {
-    margin: 5px 0;
+.weather-info .weather-icon:hover {
+    transform: rotate(15deg) scale(1.2);
 }
 
 /* Events Container */
@@ -208,58 +236,23 @@ h1, h2, h3, h4, h5, p, ul, li {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
+    transition: transform 0.3s;
 }
 
-.events-container h2 {
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
+.events-container:hover {
+    transform: scale(1.03);
 }
 
-.events-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+.events-list .event {
+    transition: background 0.3s, transform 0.3s;
 }
 
-.event {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-.event h3 {
-    margin: 0;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.event p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.event a {
-    color: #007BFF;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.event a:hover {
-    text-decoration: underline;
-    color: #0056b3;
+.events-list .event:hover {
+    background: #f9f9f9;
+    transform: translateX(10px);
 }
 
 /* Mood Board */
-.mood-section {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.mood-section h2 {
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
 .mood-board {
     margin-top: 20px;
     height: 200px;
@@ -267,12 +260,23 @@ h1, h2, h3, h4, h5, p, ul, li {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mood-board:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 #mood-message {
     margin-top: 10px;
     font-size: 1.2em;
     color: #555;
+    transition: color 0.3s;
+}
+
+#mood-message:hover {
+    color: #007BFF;
 }
 
 /* Footer */
@@ -281,31 +285,23 @@ h1, h2, h3, h4, h5, p, ul, li {
     color: #fff;
     padding: 30px 20px;
     text-align: center;
+    transition: background 0.3s;
 }
 
-.footer-links {
-    margin-bottom: 20px;
+.footer:hover {
+    background: #444;
 }
 
 .footer-links a {
     color: #ccc;
     margin: 0 10px;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .footer-links a:hover {
     color: #fff;
-}
-
-.footer-credits {
-    color: #aaa;
-    font-size: 0.9em;
-}
-
-/* Hidden Class */
-.hidden {
-    display: none;
+    transform: scale(1.1);
 }
 
 /* Responsive Design */
