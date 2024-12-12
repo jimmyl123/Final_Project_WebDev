@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Reset some basic elements */
 h1, h2, h3, h4, h5, p, ul, li {
     margin: 0;
     padding: 0;
@@ -119,6 +118,11 @@ h1, h2, h3, h4, h5, p, ul, li {
 .hero-cta:hover {
     background: #0056b3;
     transform: translateY(-5px);
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Main Container */
@@ -245,6 +249,7 @@ h1, h2, h3, h4, h5, p, ul, li {
 }
 
 .events-list .event {
+    padding: 10px;
     transition: background 0.3s, transform 0.3s;
 }
 
@@ -270,7 +275,7 @@ h1, h2, h3, h4, h5, p, ul, li {
 }
 
 #mood-message {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 1.2em;
     color: #555;
     transition: color 0.3s;
